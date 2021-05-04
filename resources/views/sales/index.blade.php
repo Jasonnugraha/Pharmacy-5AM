@@ -9,7 +9,7 @@
                 <h2>Laravel 8 CRUD </h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-success" href="" title="Create a sale"> <i class="fas fa-plus-circle"></i>
+                <a class="btn btn-success" href="{{ route('sales.create') }}" title="Create a sale"> <i class="fas fa-plus-circle"></i>
                     </a>
             </div>
         </div>
@@ -25,8 +25,8 @@
         <tr>
             <th>Sales Id</th>
             <th>Product Name</th>
+            <th>Sales Quantity</th>
             <th>Product Price</th>
-            <th>Total Price</th>
             <th>Date Created</th>
             <th width="280px">Action</th>
         </tr>
