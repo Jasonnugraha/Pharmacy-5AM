@@ -100,6 +100,8 @@ class SalesController extends Controller
      */
     public function destroy(Sales $sales)
     {
-        //
+        $sales->delete();
+        
+        return redirect()->route('sales.index')->with('success', 'Sales deleted successfully');
     }
 }
