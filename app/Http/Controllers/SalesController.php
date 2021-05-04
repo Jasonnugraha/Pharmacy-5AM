@@ -16,7 +16,8 @@ class SalesController extends Controller
     {
         $sales = Sales::latest()->paginate(5);
 
-        return view('sales.index', compact('sales'))->with('i', (request()->input('page', 1) - 1) * 5);
+        return view('sales.index', compact('sales'))
+            ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
     /**
@@ -46,7 +47,8 @@ class SalesController extends Controller
 
         Sales::create($request->all());
 
-        return redirect()->route('sales.index')->with('success', 'Sales record added');
+        return redirect()->route('sales.index')
+            ->with('success', 'Sales created successfully.');
     }
 
     /**

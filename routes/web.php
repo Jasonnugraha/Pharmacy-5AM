@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use phpDocumentor\Reflection\Types\Resource_;
+use App\Http\Controllers\SalesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,7 +16,7 @@ use phpDocumentor\Reflection\Types\Resource_;
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('welcome');
 });
 
 

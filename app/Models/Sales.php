@@ -16,6 +16,7 @@ class Sales extends Model
         'productName',
         'salesQuantity',
         'productPrice',
+        'totalPrice',
         'created_at'
     ];
 }
