@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h1>ADD NEW PRODUCT</h1>
+                <h1>SALES</h1>
             </div>
 
             <div class="pull-right">
@@ -28,22 +28,28 @@
         @csrf
 
         <div class="form-group row">
-             <label for="inputProductName" class="col-sm-2 col-form-label">Product Name</label>
+             <label for="inputProductName" class="col-sm-2 col-form-label">Products</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputProductNameId" name="productName" placeholder="Enter Product Name">
+                    <select name="Products" id="product">
+                        <option value="vitamin">Vitamin C</option>
+                        <option value="sunscreen">Sunscreen</option>
+                        <option value="painReliever">Pain Reliever</option>
+                        <option value="coughMeds">Cough&Flu Meds</option>
+                        <option value="alergyMeds">Alergy Meds</option>
+                    </select>
                 </div>
         </div>
 
         <div class="form-group row">
             <label for="salesQuantity" class="col-sm-2 col-form-label">Sales Quantity</label>
-                <div class="col-sm-10">
+                <div class="col-xs-4">
                     <input type="number" class="form-control" id="salesQuantityId" name="salesQuantity" placeholder="Enter the amount for the Sales Quantity">
                 </div>
          </div>
 
         <div class="form-group row">
             <label for="productPrice" class="col-sm-2 col-form-label">Product Price</label>
-                <div class="col-sm-10">
+                <div class="col-xs-4">
                     <input type="number" class="form-control" id="productPriceId" name="productPrice" placeholder="Enter the amount for the Product Price">
                 </div>
         </div>
