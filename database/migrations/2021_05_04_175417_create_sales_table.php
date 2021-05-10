@@ -19,7 +19,8 @@ class CreateSalesTable extends Migration
             $table->integer('SalesQuantity');
             $table->integer('ProductPrice');
             $table->integer('TotalPrice');
-            $table->timestamps();
+            $table->timestamp('created_at')->useCurrent();
+            $table->timestamp('updated_at')->nullable();
         });
     }
 

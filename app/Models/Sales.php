@@ -13,10 +13,10 @@ class Sales extends Model
     public $timestamps = true;
 
     protected $fillable = [ 
-        'productName',
-        'salesQuantity',
-        'productPrice',
-        'totalPrice',
+        'ProductName',
+        'SalesQuantity',
+        'ProductPrice',
+        'TotalPrice',
         'created_at'
     ];
 }

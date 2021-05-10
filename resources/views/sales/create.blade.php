@@ -30,21 +30,28 @@
         <div class="form-group row">
              <label for="inputProductName" class="col-sm-2 col-form-label">Product Name</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="inputProductNameId" name="productName" placeholder="Enter Product Name">
+                    <input type="text" class="form-control" id="inputProductNameId" name="ProductName" placeholder="Enter Product Name">
                 </div>
         </div>
 
         <div class="form-group row">
             <label for="salesQuantity" class="col-sm-2 col-form-label">Sales Quantity</label>
                 <div class="col-sm-10">
-                    <input type="number" class="form-control" id="salesQuantityId" name="salesQuantity" placeholder="Enter the amount for the Sales Quantity">
+                    <input type="number" class="form-control" id="salesQuantityId" name="SalesQuantity" placeholder="Enter the amount for the Sales Quantity">
                 </div>
          </div>
 
         <div class="form-group row">
             <label for="productPrice" class="col-sm-2 col-form-label">Product Price</label>
                 <div class="col-sm-10">
-                    <input type="number" class="form-control" id="productPriceId" name="productPrice" placeholder="Enter the amount for the Product Price">
+                    <input type="number" class="form-control" id="productPriceId" name="ProductPrice" placeholder="Enter the amount for the Product Price">
+                </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="productPrice" class="col-sm-2 col-form-label">Product Price</label>
+                <div class="col-sm-10">
+                    <input type="number" class="form-control" id="productPriceId" name="TotalPrice" placeholder="Enter the amount for the Total Product Price">
                 </div>
         </div>
 
