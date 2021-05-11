@@ -3,6 +3,7 @@
 
 @section('content')
     {{$sales}}
+
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
@@ -33,10 +34,10 @@
         @foreach ($sales as $sale)
             <tr>
                 <td>{{ ++$i }}</td>
-                <td>{{ $sale->name }}</td>
-                <td>{{ $sale->introduction }}</td>
-                <td>{{ $sale->location }}</td>
-                <td>{{ $sale->cost }}</td>
+                <td>{{ $sale->product }}</td>
+                <td>{{ $sale->salesQuantity }}</td>
+                <td>{{ $sale->productPrice }}</td>
+                <td>{{ $sale->totalPrice }}</td>
                 <td>{{ date_format($sale->created_at, 'jS M Y') }}</td>
                 <td>
                     <form action="{{ route('sales.destroy', $sale->id) }}" method="POST">
@@ -55,8 +56,8 @@
 
                         <button type="submit" title="delete" style="border: none; background-color:transparent;">
                             <i class="fas fa-trash fa-lg text-danger"></i>
-
                         </button>
+                        
                     </form>
                 </td>
             </tr>
