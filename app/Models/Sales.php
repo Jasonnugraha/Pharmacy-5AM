@@ -11,12 +11,14 @@ class Sales extends Model
 
     protected $table = 'sales';
     public $timestamps = true;
+    protected $primaryKey = 'SalesId';
 
     protected $fillable = [ 
-        'productName',
-        'salesQuantity',
-        'productPrice',
-        'totalPrice',
-        'created_at'
+        'ProductName',
+        'SalesQuantity',
+        'ProductPrice',
+        'TotalPrice',
+        'created_at',
+        'updated_at'
     ];
 }

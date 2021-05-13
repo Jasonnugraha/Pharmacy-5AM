@@ -16,8 +16,9 @@ class SalesController extends Controller
     {
         $sales = Sales::latest()->paginate(5);
 
-        return view('sales.index', compact('sales'))
-            ->with('i', (request()->input('page', 1) - 1) * 5);
+        return view('sales.index',['sales'=>$sales]);
+
+        // return view('sales.index', compact('sales'))->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
     /**
@@ -41,14 +42,19 @@ class SalesController extends Controller
         $request->validate([
             'ProductName' => 'required',
             'SalesQuantity' => 'required',
-            'ProductPrice' => 'required',
-            'TotalPrice' => 'required'
+            'ProductPrice' => 'required'
         ]);
 
-        Sales::create($request->all());
+        $requestBody = $request->all();
+        
+        $salesQty = (int)$requestBody['SalesQuantity'];
+        $productPrice = (int)$requestBody['ProductPrice'];
+        $requestBody['TotalPrice'] = $salesQty * $productPrice;
 
-        return redirect()->route('sales.index')
-            ->with('success', 'Sales created successfully.');
+        Sales::create($requestBody);
+
+        return redirect()->route('sales.index');
+        // return redirect()->route('sales.index')->with('success', 'Sales created successfully.');
     }
 
     /**
@@ -100,10 +106,12 @@ class SalesController extends Controller
      * @param  \App\Models\Sales  $sales
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Sales $sales)
+    public function destroy($salesID)
     {
+        $sales = Sales::where('SalesId', $salesID)->first();
         $sales->delete();
         
         return redirect()->route('sales.index')->with('success', 'Sales deleted successfully');
+
     }
 }
