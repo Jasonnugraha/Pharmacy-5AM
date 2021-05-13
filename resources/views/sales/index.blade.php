@@ -1,12 +1,14 @@
 @extends('layouts.app')
 
-
 @section('content')
-    {{$sales}}
+    {{-- @foreach ($sales as $sale)
+        {{$sale}}
+    @endforeach --}}
+
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Pharmacy Sales Records</h2>
+                <h2>SALES PRODUCT</h2>
             </div>
             <div class="pull-right">
                 <a class="btn btn-success" href="{{ route('sales.create') }}" title="Create a sale"> <i class="fas fa-plus-circle"></i>
@@ -27,43 +29,44 @@
             <th>Product Name</th>
             <th>Sales Quantity</th>
             <th>Product Price</th>
-            <th>Date Created</th>
+            <th>Total Price </th>
+            <th>Sales Date</th>
             <th width="280px">Action</th>
         </tr>
         @foreach ($sales as $sale)
             <tr>
-                <td>{{ ++$i }}</td>
-                <td>{{ $sale->name }}</td>
-                <td>{{ $sale->introduction }}</td>
-                <td>{{ $sale->location }}</td>
-                <td>{{ $sale->cost }}</td>
+                <td>{{ $sale->SalesId }}</td>
+                <td>{{ $sale->ProductName }}</td>
+                <td>{{ $sale->SalesQuantity }}</td>
+                <td>${{ $sale->ProductPrice }}</td>
+                <td>${{ $sale->TotalPrice }}</td>
                 <td>{{ date_format($sale->created_at, 'jS M Y') }}</td>
                 <td>
-                    <form action="{{ route('sales.destroy', $sale->id) }}" method="POST">
+                    <form action="{{ route('sales.destroy', $sale->SalesId) }}" method="POST">
 
-                        <a href="{{ route('sales.show', $sale->id) }}" title="show">
+                        {{-- <a href="{{ route('sales.show', $sale->SalesId) }}" title="show">
                             <i class="fas fa-eye text-success  fa-lg"></i>
                         </a>
 
-                        <a href="{{ route('sales.edit', $sale->id) }}">
+                        <a href="{{ route('sales.edit', $sale->SalesId) }}">
                             <i class="fas fa-edit  fa-lg"></i>
 
-                        </a>
+                        </a> --}}
 
-                        @csrf
+                        @csrf                                                   
                         @method('DELETE')
 
                         <button type="submit" title="delete" style="border: none; background-color:transparent;">
                             <i class="fas fa-trash fa-lg text-danger"></i>
-
                         </button>
+                        
                     </form>
                 </td>
             </tr>
         @endforeach
     </table>
 
-    {!! $sales->links() !!}
+    {!! $sales->links("pagination::bootstrap-4") !!}
 
 
 

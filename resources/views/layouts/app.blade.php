@@ -30,6 +30,10 @@
 
     </style>
 
+    <script>
+        @yield('script')
+    </script>
+    
 </head>
 
 <body>
