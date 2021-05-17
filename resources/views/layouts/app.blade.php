@@ -2,7 +2,7 @@
 
 <head>
     <title>Pharmacy</title>
-
+    <link rel="stylesheet" href="css/app.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.css"
         rel="stylesheet">
 
@@ -20,12 +20,12 @@
             left: 0;
             bottom: 0;
             width: 100%;
-            background-color: #9C27B0;
             color: white;
             text-align: center;
         }
         body {
-            background-color:  #EDF7EF
+            background-color:  #EDF7EF;
+            font-family: "Roboto";
         }
 
     </style>
