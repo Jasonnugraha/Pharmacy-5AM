@@ -29,7 +29,7 @@
         body {
             background-color:  #DCE1DE;
             font-family: 'Source Sans Pro', sans-serif;
-            color: #216869;
+            color: #1b6061;
         }
         .title {
             font-weight: bold;
