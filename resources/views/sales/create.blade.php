@@ -29,7 +29,7 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h1 class="title">SALES</h1>
+                <h1>SALES</h1>
             </div>
 
             <div class="pull-right">
@@ -54,8 +54,8 @@
 
         <div class="form-group row">
              <label for="inputProductName" class="col-sm-2 col-form-label">Products</label>
-                <div class="col-xs-4">
-                    <select name="ProductName" class="form-control" id="product" onchange="onProductChange()">
+                <div class="col-sm-10">
+                    <select name="ProductName" id="product" onchange="onProductChange()">
                         <option value="#">Choose product...</option>
                         <option value="Vitamin">Vitamin C</option>
                         <option value="Sunscreen">Sunscreen</option>

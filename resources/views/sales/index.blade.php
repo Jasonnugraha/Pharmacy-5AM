@@ -8,7 +8,7 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2 class="title">SALES PRODUCT</h2>
+                <h2>SALES PRODUCT</h2>
             </div>
             <div class="pull-right">
                 <a class="btn btn-success" href="{{ route('sales.create') }}" title="Create a sale"> <i class="fas fa-plus-circle"></i>
