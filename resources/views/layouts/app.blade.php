@@ -25,7 +25,25 @@
             text-align: center;
         }
         body {
-            background-color:  #EDF7EF
+            background-color:  #DCE1DE;
+            font-family: 'Source Sans Pro', sans-serif;
+            color: #1e6566;
+        }
+        .title {
+            font-weight: bold;
+            margin: 25px 0;
+            font-size: 2.5em;
+        }
+        th {
+            background-color: #1F2421;
+            color: #9CC5A1;
+            padding: 10px;
+        }
+        table tr:nth-child(odd){
+            background-color: #BFD9C2;
+        }
+        table tr:nth-child(even){
+            background-color: #D3D9D5;
         }
 
     </style>
